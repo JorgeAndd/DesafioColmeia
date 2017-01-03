@@ -1,5 +1,5 @@
 body {
-    background: #eee;
+    background: white;
     text-align: center;
     padding: 0 25px;
 }
@@ -37,4 +37,45 @@ body {
     font-size: 12px;
     color: green;
     line-height: 13px;
+}
+
+div.professor {
+  background: #F5F5F5;
+  border: none;
+  border-left: 2px dashed gray;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-right: 2px dashed gray;
+  font-family: Raleway;
+
+  overflow: auto;
+}
+
+div .professor .foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  margin: 1%;
+  float: left;
+}
+
+div .professor .nome {
+  float: left;
+  font-size: x-large;
+  margin-top: 1%;
+  margin-left: 1%;
+  font-weight: bold;
+  color: orange;
+
+}
+
+div .professor .materia {
+  float: left;
+  font-size: x-large;
+  margin-top: 1%;
+  margin-left: 1%;
+  font-weight: bold;
+  color: gray;
+
 }
