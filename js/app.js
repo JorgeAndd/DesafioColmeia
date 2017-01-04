@@ -2,13 +2,29 @@ Parse.initialize("SU0myMIe1AUitLKar0mum8My8RbQ87lEaRjjKDgh","GtvnNXChRLZRYBbWxNy
 Parse.serverURL = 'https://parseapi.back4app.com/';
 
 var professores = [];
-init();
 
-$('#nome').bind('input', function() {
+$('#nome_input').bind('input', function() {
 	var nome = $(this).val();
 
 	getProfessores(nome);
 });
+
+$(document).ready(function(){
+	init();
+});
+
+$.fn.nota = function() {
+    return $(this).each(function() {
+        // Get the value
+        var val = parseFloat($(this).html());
+        // Make sure that the value is in 0 - 5 range, multiply to get width
+        var size = Math.max(0, (Math.min(5, val))) * 16;
+        // Create stars holder
+        var $span = $('<span />').width(size);
+        // Replace the numerical value with stars
+        $(this).html($span);
+    });
+}
 
 // Classe professores
 function Professor() {
@@ -51,32 +67,33 @@ function init()
 
 function getProfessores(nome)
 {
-	// Limpa os professores anteriores
-  $(".professores").html("");
+		// Limpa os professores anteriores
+		$(".professores").html("");
 
-	for(var i = 0; i < professores.length; i++)
-	{
-		var prof = professores[i];
-
-		// Busca o nome do professor
-		if(prof.nome.toUpperCase().startsWith(nome.toUpperCase()))
+		for(var i = 0; i < professores.length; i++)
 		{
-			// $(".professores").append("Nome: " + prof.nome + "<br />Materia: " + prof.materia + "<br />Nota:" + prof.nota + "<br />Imagem:" + prof.imagem + "<br />");
-			createPannel(prof);
-		}
-	}
+			var prof = professores[i];
 
-	function createPannel(professor)
-	{
-		var newProf = $('#profTemplate').clone();
+			// Busca o nome do professor no array
+			// converte para uppercase para ser case-insensitive
+			if(prof.nome.toUpperCase().startsWith(nome.toUpperCase()))
+				createPannel(prof);
+		}
+}
+
+function createPannel(professor)
+{
+		// Clona a div original do html e modifica os atributos
+		var newProf = $('#profTemplate').clone(true);
 
 		newProf.attr('id', professor.objectId);
-		newProf.appendTo(".professores");
 		newProf.find('.foto').attr('src', professor.imagem.url());
 		newProf.find('.nome').html(professor.nome);
 		newProf.find('.materia').html(professor.materia);
+		newProf.find('.nota').html(professor.nota);
+		newProf.find('.nota').nota();
 		newProf.find('.curriculo').html(professor.curriculo);
 		newProf.show();
 
-	}
+		$(".professores").append(newProf.clone(true));
 }

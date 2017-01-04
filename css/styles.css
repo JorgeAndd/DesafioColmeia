@@ -2,6 +2,7 @@ body {
     background: white;
     text-align: center;
     padding: 0 25px;
+    overflow-y: scroll;
 }
 
 #main {
@@ -19,24 +20,15 @@ body {
     font-size: 35px;
 }
 
-#main ul {
-    padding-left: 20px;
+.titulo {
+  font-family: Raleway;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  color: #FCB468;
 }
 
-#main .error {
-    border: 1px solid red;
-    background: #FDEFF0;
-    padding: 20px;
-}
-
-#main .success {
-    margin-top: 25px;
-}
-
-#main .success code {
-    font-size: 12px;
-    color: green;
-    line-height: 13px;
+#nome_input {
+  margin-bottom: 2%;
 }
 
 div.professor {
@@ -47,8 +39,8 @@ div.professor {
   border-right: 2px dashed #CACACA;
   border-top: 1px dashed #CACACA;
 
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-left: 5%;
+  margin-right: 5%;
   margin-top: 1%;
 
   font-family: Raleway;
@@ -70,31 +62,55 @@ div .professor .nome {
   font-size: 25px;
   font-weight: bold;
   color: #FCB468;
+  float: left;
+  clear: both;
 }
 
 div .professor .materia {
   font-size: x-large;
   font-weight: bold;
   color: #A1A1A1;
+  float: left;
+  clear: both;
+  margin-bottom: 3%;
+}
+
+span.nota, span.nota span {
+    display: block;
+    background: url(../imgs/estrelas.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+    float: left;
+    clear: both;
+}
+
+span.nota span {
+    background-position: 0 0;
 }
 
 div .professor .curriculo_header {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   color: #A1A1A1;
+  float: left;
+  clear: both;
 }
 
 div .professor .curriculo {
   color: #B4B4B4;
-  font-size: large;
+  font-size: medium;
   font-weight: bold;
+  display: block;
+  float: left;
+  clear: both;
+  margin-top: 1%;
 }
 
 div .col1
 {
   float: left;
   text-align: left;
-  margin-top: 2%;
+  margin-top: 1%;
   margin-bottom: 2%;
 }
 
