@@ -42,11 +42,15 @@ body {
 div.professor {
   background: #F5F5F5;
   border: none;
-  border-left: 2px dashed gray;
+
+  border-left: 2px dashed #CACACA;
+  border-right: 2px dashed #CACACA;
+  border-top: 1px dashed #CACACA;
+
   margin-left: 8%;
   margin-right: 8%;
   margin-top: 1%;
-  border-right: 2px dashed gray;
+
   font-family: Raleway;
 
   overflow: hidden;
@@ -56,6 +60,7 @@ div .professor .foto {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin: 1%;
 
   margin: 1%;
   float: left;
@@ -80,14 +85,25 @@ div .professor .curriculo_header {
 }
 
 div .professor .curriculo {
-  color: gray;
+  color: #B4B4B4;
   font-size: large;
   font-weight: bold;
 }
 
-div .column
+div .col1
 {
   float: left;
-  height: auto;
   text-align: left;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+div .col2
+{
+  float: right;
+  text-align: left;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 75%;
+  margin-right: 1%;
 }
