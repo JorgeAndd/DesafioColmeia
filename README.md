@@ -2,10 +2,13 @@
 Busca de Professores é um sistema que exibe uma listagem de professores, permitindo uma busca por nome.
 Foi desenvolvido com uso de HTML/CSS, Javascript e os frameworks Parse e Electron
 
-## Autor
-**Jorge Luiz Andrade** 
+### Autor
+Jorge Luiz Andrade
 
 ## Execução
+Basta baixar [última versão](https://github.com/JorgeAndd/DesafioColmeia/releases/tag/v1.0.1) e executar BuscaProfessores.exe
+
+Além disso, é possível executar pelo browser ou por meio do Electron:
 
  - Execução pelo browser
 
@@ -20,15 +23,3 @@ app/index.html
   ```
  electron pasta_raiz
   ```
-
- - Executável
-  
-  ```
-No repositório do github é possível encontrar um release(zipado) para Windows 64bits
-https://github.com/JorgeAndd/DesafioColmeia/releases/latest
-	
-Basta extrair o arquivo e executar BuscaProfessores.exe
-  ```
-
-
-
