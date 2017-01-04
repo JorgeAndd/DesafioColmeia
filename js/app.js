@@ -20,10 +20,10 @@ function Professor() {
 	var nota;
 }
 
+// Função inicial para popular o array de professores
 function init()
 {
 	// Pega todos os professores do banco
-
 	var Professores = Parse.Object.extend("Professores");
 	var query = new Parse.Query(Professores);
 
@@ -31,6 +31,7 @@ function init()
 		success: function (results) {
 			for (var i = 0; i < results.length; i++)
 			{
+				// Cria um novo objeto de professor e insere no array de professores
 				var prof = new Professor();
 				prof.objectId = results[i].get('objectId');
 				prof.nome = results[i].get('nome');
@@ -53,20 +54,29 @@ function getProfessores(nome)
 	// Limpa os professores anteriores
   $(".professores").html("");
 
-	// Não realiza a busca se a caixa de texto está vazia
-	if(nome == '')
-		return;
-
 	for(var i = 0; i < professores.length; i++)
 	{
 		var prof = professores[i];
 
-		if(prof.nome.startsWith(nome))
+		// Busca o nome do professor
+		if(prof.nome.toUpperCase().startsWith(nome.toUpperCase()))
 		{
-			$(".professores").append("Nome: " + prof.nome + "<br />Materia: " + prof.materia + "<br />");
+			// $(".professores").append("Nome: " + prof.nome + "<br />Materia: " + prof.materia + "<br />Nota:" + prof.nota + "<br />Imagem:" + prof.imagem + "<br />");
+			createPannel(prof);
 		}
 	}
 
+	function createPannel(professor)
+	{
+		var newProf = $('#profTemplate').clone();
 
+		newProf.attr('id', professor.objectId);
+		newProf.appendTo(".professores");
+		newProf.find('.foto').attr('src', professor.imagem.url());
+		newProf.find('.nome').html(professor.nome);
+		newProf.find('.materia').html(professor.materia);
+		newProf.find('.curriculo').html(professor.curriculo);
+		newProf.show();
 
+	}
 }

@@ -43,12 +43,13 @@ div.professor {
   background: #F5F5F5;
   border: none;
   border-left: 2px dashed gray;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-top: 1%;
   border-right: 2px dashed gray;
   font-family: Raleway;
 
-  overflow: auto;
+  overflow: hidden;
 }
 
 div .professor .foto {
@@ -61,21 +62,32 @@ div .professor .foto {
 }
 
 div .professor .nome {
-  float: left;
-  font-size: x-large;
-  margin-top: 1%;
-  margin-left: 1%;
+  font-size: 25px;
   font-weight: bold;
-  color: orange;
-
+  color: #FCB468;
 }
 
 div .professor .materia {
-  float: left;
   font-size: x-large;
-  margin-top: 1%;
-  margin-left: 1%;
   font-weight: bold;
-  color: gray;
+  color: #A1A1A1;
+}
 
+div .professor .curriculo_header {
+  font-size: 25px;
+  font-weight: bold;
+  color: #A1A1A1;
+}
+
+div .professor .curriculo {
+  color: gray;
+  font-size: large;
+  font-weight: bold;
+}
+
+div .column
+{
+  float: left;
+  height: auto;
+  text-align: left;
 }
