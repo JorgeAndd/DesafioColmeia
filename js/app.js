@@ -2,15 +2,12 @@ Parse.initialize("SU0myMIe1AUitLKar0mum8My8RbQ87lEaRjjKDgh","GtvnNXChRLZRYBbWxNy
 Parse.serverURL = 'https://parseapi.back4app.com/';
 
 var professores = [];
+init();
 
 $('#nome_input').bind('input', function() {
 	var nome = $(this).val();
 
 	getProfessores(nome);
-});
-
-$(document).ready(function(){
-	init();
 });
 
 $.fn.nota = function() {
@@ -58,6 +55,9 @@ function init()
 
 				professores.push(prof);
 			}
+
+			// Exibe todos os professores quando termina de buscar no banco
+			getProfessores('');
 		},
 		error: function (error) {
 			alert("Erro: " + error.code + " " + error.message);
@@ -73,7 +73,6 @@ function getProfessores(nome)
 		for(var i = 0; i < professores.length; i++)
 		{
 			var prof = professores[i];
-
 			// Busca o nome do professor no array
 			// converte para uppercase para ser case-insensitive
 			if(prof.nome.toUpperCase().startsWith(nome.toUpperCase()))
