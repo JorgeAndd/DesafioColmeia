@@ -1,3 +1,6 @@
+Busca de Professores
+Jorge Luiz Andrade
+
 O Programa de busca de professores exibe uma listagem de professores, permitindo uma busca por nome.
 Desenvolvido com HTML, CSS e Javascript, com frameworks Parse e Electron.
 

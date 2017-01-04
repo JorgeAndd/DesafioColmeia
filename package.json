@@ -5,7 +5,7 @@
   "scripts": {
     "start": "electron .",
     "package-all": "electron-packager ./ BuscaProfessores --all --out builds --version 1.0.0 --overwrite --asar=true",
-    "package": "electron-packager ./ BuscaProfessores --out builds --version 1.0.0 --overwrite --asar=true"
+    "package": "electron-packager ./ BuscaProfessores --out builds --version 1.0.0 --overwrite --asar=true --prune=true"
   },
   "repository": "https://github.com/JorgeAndd/DesafioColmeia",
   "author": "Jorge Luiz Andrade",
