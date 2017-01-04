@@ -25,7 +25,7 @@ app/index.html
   
   ```
 No repositório do github é possível encontrar um release(zipado) para Windows 64bits
-https://github.com/JorgeAndd/DesafioColmeia/releases
+https://github.com/JorgeAndd/DesafioColmeia/releases/latest
 	
 Basta extrair o arquivo e executar BuscaProfessores.exe
   ```
